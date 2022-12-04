@@ -35,9 +35,6 @@ function create_endpoint(engine, API_KEY) {
 
 var API_KEY = "TyivXDz4fLTaoWkhUZtMleekhBeJTzQo";
 const endpoint = create_endpoint("google", API_KEY);
-var split_endpoint = endpoint.split("/");
-var hostname = split_endpoint[2];
-var path = split_endpoint[3] + "&q=" + Search.value;
 
 //gets the search value for any google search when extension is enabled
 var search_value = document.getElementsByClassName("gLFyf").q.value 
@@ -48,16 +45,25 @@ var Search = {
 };
 
 console.log(endpoint);
-console.log(hostname);
-console.log(path);
 
 const options = {
     "method": "GET",
-    "hostname":  hostname,
-    "port": null,
-    "path": path,
     "headers": {}
   };
+
+
+fetch(endpoint + "&q=" + Search.value, options)
+    .then(res => {
+        if(!res.ok) {
+            throw HTTPException(`HTTP error! Status: ${res.status}`);
+        }
+
+        return res.json();
+    })
+    .then(result => {
+        console.log(result);
+    }
+)
 
 //https://docs.webscrapingapi.com/google-search-api/google-search-engines/google-search-api
 // const req = http.request(options, function (res) {

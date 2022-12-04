@@ -19,7 +19,8 @@
         ]
     }],
     "host_permissions": [
-      "https://www.google.com/search*"
+      "https://www.google.com/search*",
+      "https://serpapi.webscrapingapi.com/*"
     ],
     "action": {
       "default_popup": "popup.html"

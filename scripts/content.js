@@ -51,18 +51,8 @@ const options = {
     "headers": {}
   };
 
-//not running to preserve credits we have use below code
-data ={ads :
-    [
-    {link : "https://www.target.com/p/lego-star-wars-imperial-light-cruiser-75315-building-kit/-/A-82133834?ref=tgt_adv_XS000000&AFID=google_pla_df_free_local&CPNG=Toys&adgroup=204-0", title : "LEGO Star Wars Imperial Light Cruiser 75315 Building Kit"},
-    {link : "https://www.amazon.com/66596-Battle-Troopers-Imperial-Patrol/dp/B07HDZG32D?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=ASDO1M0O64OFA", title : "LEGO Star Wars 66596 Super Battle Pack 2 In 1 Includes 75206 Jedi & Clone Troopers & 75207 Imperial Patrol Pack, 1.54 Lb"},
-    {link : "https://www.amazon.com/LEGO-Star-Wars-Millennium-Minifigures/dp/B07QQ396NH?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=ATVPDKIKX0DER", title : "LEGO Star Wars Millennium Falcon 75257 Building Toy Set for Kids, Boys, and Girls Ages 9+ (1353 Pieces)"}
+//not running to preserve credits we have
 
-]};
-
-console.log(data);
-parse_response(data);
-render();
 // fetch(endpoint + "&q=" + Search.value, options)
 //     .then(res => {
 //         if(!res.ok) {

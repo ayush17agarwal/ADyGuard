@@ -100,23 +100,18 @@ function render() {
     try {
 
         for (const ad of popup_ads) {
+
             adsHTML += 
             `<li>
                 <a href="${ad.link}" class="ad">${ad.name}</a>
                 <div>
-                    <button class="useful" onclick="isUseful('${ad.name}')">good</button>
-                    <button class="useless" onclick="isUseless('${ad.name}')">bad</button>
+                    <button onclick="isUseful('${ad.name}')">good</button>
+                    <button onclick="isUseless('${ad.name}')">bad</button>
                 </div>
             </li>`
         }
 
         ul.innerHTML = adsHTML;
-
-        // var adsInnerHTML = document.querySelectorAll("ul li");
-        // for (const ad of adsInnerHTML) {
-        //     ad.querySelector(".useful").addEventListener("click", isUseful(ad.name));
-        //     ad.querySelector(".useless").addEventListener("click", isUseless(ad.name));
-        // }
     }
     catch(e) {
         //somethign idk what LOL

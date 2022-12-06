@@ -13,7 +13,6 @@
     {
         "js": [
           "scripts/exceptions.js",
-          "scripts/popup.js", 
           "scripts/content.js"],
         "matches": [
         "https://www.google.com/search*"
@@ -25,5 +24,6 @@
     ],
     "action": {
       "default_popup": "popup.html"
-    }
+    },
+    "permissions": ["activeTab"]
 }

@@ -51,6 +51,8 @@ const options = {
     "headers": {}
   };
 
+localStorage.setItem("popup_ads", JSON.stringify([]));
+localStorage.setItem("report_ads", JSON.stringify([]));
 //not running to preserve credits we have
 
 // fetch(endpoint + "&q=" + Search.value, options)

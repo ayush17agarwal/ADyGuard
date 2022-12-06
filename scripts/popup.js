@@ -39,19 +39,15 @@ function isUseful(e) {
     //find index of the ad
     let index = 0;
     for(; index < popup_ads.length; index++) {
-        console.log( ad_title);
-        console.log( popup_ads[index].name);
         if (ad_title == popup_ads[index].name) {
             break;
         }
     }
-    console.log(index);
     var ad = popup_ads.splice(index, 1); //removes the one ad from popup_ads
     ad[0].isUseful = true; //ad has 1 element so set its isUseful value to true
     
     report_ads.push(ad[0]); //move ad from popup_ads to report_ads
     console.log(report_ads);
-    console.log(popup_ads);
 }
 
 function isUseless(e) {
@@ -68,7 +64,7 @@ function isUseless(e) {
     ad[0].isUseful = false; //ad has 1 element so set its isUseful value to false
     
     report_ads.push(ad[0]); //move ad from popup_ads to report_ads
-    browser.runtime.reload();
+    console.log(report_ads);
 }
 
 

@@ -62,19 +62,6 @@ fetch(endpoint + "&q=" + Search.value, options)
     })
     .then(result => {
         console.log(result);
+        parse_response(result);
     }
 )
-
-//https://docs.webscrapingapi.com/google-search-api/google-search-engines/google-search-api
-// const req = http.request(options, function (res) {
-//     const chunks = [];
-  
-//     res.on("data", function (chunk) {
-//       chunks.push(chunk);
-//     });
-  
-//     res.on("end", function () {
-//       const body = Buffer.concat(chunks);
-//       console.log(body.toString());
-//     });
-//   });

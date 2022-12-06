@@ -12,7 +12,8 @@
     "content_scripts": [
     {
         "js": [
-          "scripts/exceptions.js", 
+          "scripts/exceptions.js",
+          "scripts/popup.js", 
           "scripts/content.js"],
         "matches": [
         "https://www.google.com/search*"

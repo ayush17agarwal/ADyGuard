@@ -63,6 +63,7 @@ data ={ads :
 console.log(data);
 parse_response(data);
 render();
+renderReport();
 // fetch(endpoint + "&q=" + Search.value, options)
 //     .then(res => {
 //         if(!res.ok) {

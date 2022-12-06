@@ -122,6 +122,24 @@ function render() {
         //somethign idk what LOL
     }
 }
+function renderReport() {
+    const ul = document.querySelector(".report");
+    ul.innerHTML = "";
+    var reportHTML = "";
+
+    try {
+        for (const ad of popup_ads) {
+            reportHTML +=
+            `<li>
+                <a href="${ad.link}" class="ad">${ad.name}</a>
+            </li>`
+        }
+        ul.innerHTML = reportHTML;
+    }
+    catch(e) {
+
+    }
+}
 
 
 data = {ads :
@@ -135,3 +153,4 @@ data = {ads :
 console.log(data);
 parse_response(data);
 render();
+renderReport();
